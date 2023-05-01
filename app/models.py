@@ -69,4 +69,4 @@ class Post(db.Model):
 
 class ContactSchema(ma.Schema):
     class Meta:
-        fields = ['id', 'name','email','phone_number', 'address']
+        fields = ['id', 'brand', 'model']

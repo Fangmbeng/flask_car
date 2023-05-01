@@ -27,7 +27,7 @@ def create_post(current_user_token):
 
 @api.route('/posts', methods = ['GET'])
 @token_required
-def get_contact(current_user_token):
+def get_post(current_user_token):
     a_user = current_user_token.token
     post = Post.query.filter_by(user_token = a_user).all()
     response = contacts_schema.dump(post)
@@ -35,7 +35,7 @@ def get_contact(current_user_token):
 
 @api.route('/posts/<id>', methods = ['GET'])
 @token_required
-def get_contact_two(current_user_token, id):
+def get_post_two(current_user_token, id):
     fan = current_user_token.token
     if fan == current_user_token.token:
         post = Post.query.get(id)
@@ -47,7 +47,7 @@ def get_contact_two(current_user_token, id):
 # UPDATE endpoint
 @api.route('/contacts/<id>', methods = ['POST','PUT'])
 @token_required
-def update_contact(current_user_token,id):
+def update_postt(current_user_token,id):
     post = Post.query.get(id) 
     post.brand = request.json['brand']
     post.model = request.json['model']
