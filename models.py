@@ -70,3 +70,7 @@ class Post(db.Model):
 class ContactSchema(ma.Schema):
     class Meta:
         fields = ['id', 'brand', 'model']
+        
+
+contact_schema = ContactSchema()
+contacts_schema = ContactSchema(many=True)

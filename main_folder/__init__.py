@@ -6,9 +6,9 @@ from main_folder.authentication.routes import auth
 
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
-from ..models import db, login_manager, ma
+from models import db, login_manager, ma
 from flask_cors import CORS
-from ..helpers import JSONEncoder
+from helpers import JSONEncoder
 
 app = Flask(__name__)
 app.config['TESTING'] = True
@@ -23,6 +23,5 @@ app.config.from_object(Config)
 db.init_app(app)
 login_manager.init_app(app)
 ma.init_app(app)
-db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
