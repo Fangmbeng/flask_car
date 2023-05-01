@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
-from app.helpers import token_required
-from app.models import db, Post, contact_schema, contacts_schema
+from helpers import token_required
+from models import db, Post, contact_schema, contacts_schema
 
 api = Blueprint('api',__name__, url_prefix='/api')
 
