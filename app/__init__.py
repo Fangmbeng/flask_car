@@ -1,8 +1,8 @@
 from flask import Flask
 from config import Config
-from main_folder.api.routes import api
-from main_folder.site.routes import site
-from main_folder.authentication.routes import auth
+from app.api.routes import api
+from app.site.routes import site
+from app.authentication.routes import auth
 
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate

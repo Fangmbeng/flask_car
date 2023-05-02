@@ -1,1 +1,1 @@
-gunicorn"app:main_folder"
+gunicorn "app:app"
